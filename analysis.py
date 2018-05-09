@@ -22,6 +22,7 @@ def prepare_data(df):
     df["log_ExterCond"] = np.log(df["ExterCond"])
     return df
 
+# credit: https://stackoverflow.com/questions/27928275/find-p-value-significance-in-scikit-learn-linearregression
 def summary(lm, X, y):
     params = np.append(lm.intercept_,lm.coef_)
     predictions = lm.predict(X)
